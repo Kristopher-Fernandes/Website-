@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    background:linear-gradient(rgba(1,1,1,0.5), rgba(1,1,1,0.2)),url("img1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color:white;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.container
+{
+    max-width: 1200px;
+    width:90%;
+    margin:auto;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.btn 
+{
+    border-style: solid;
+    border-radius: 20px;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    
+}

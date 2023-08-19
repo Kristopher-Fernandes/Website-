@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    /* background-color: rgb(255, 171, 75); */
+    background:linear-gradient(rgba(255,255,255, 0.2),rgba(1,1,1, 0.5)) ,url("orangeTheme.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+}
+
+.header
+{
+    background:linear-gradient(rgba(1,1,1,0.5), rgba(1,1,1,0.2)),url("cocktail.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+    color:white;
+    position: relative;
+    font-size: 1.6rem;
+
+}
+
+
+.header .nav a{
+    color:white;
+    text-decoration: none;
+    
+}
+
+a:hover {
+  border-bottom: 2px solid cyan;
+  padding-bottom: 5px;
+}
+
+.container
+{
+    max-width: 1200px;
+    width:90%;
+    margin:auto;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    min-height:8vh;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav-items{
+    width: 40%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+   
+}
+
+.headline
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    outline: none;
+    border:none;
+    cursor: pointer;
+}
+
+.btn-headline {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
+.btn-headline:hover
+{
+    border-style: outset;
+}
+
+.section-1{
+    margin-top:5rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.form-todo{
+    margin-top: 1rem;
+    min-height:5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-todo input{
+    min-height:100%;
+}
+
+.form-todo input[type="text"]{
+    width:78%;
+    padding: 0 0.8rem;
+    font-size: 1.6rem;
+}
+.form-todo button[type="button"]{
+    width:20%;
+    background: rgb(255, 91, 2);
+    color: white;
+}
+
+.section-2
+{
+    /* border: 2px solid black; */
+    margin-top: 1rem;
+    gap:10px;
+    /* min-height:20vh; */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(230, 2, 255, 0.781);
+    /* background: url("orangeTheme.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+/* Result box css from javascript */
+
+.result-box
+{   
+    margin:5rem 0;
+    /* margin:4rem 8rem; */ 
+    /* border: 5px solid rgb(255, 91, 2);   */
+     display: flex;
+     max-width: 300px;
+     width: 90%;
+     /* flex-wrap: wrap; */
+     flex-direction: column;
+     
+     justify-content: space-around;
+     
+     
+    /* padding:1rem auto; */
+}
+
+/* .result-box img {
+    width: 20px;
+
+} */
+
+
+.result-box h3
+{
+    text-align:center;
+    text-transform:uppercase;
+    background-color: rgb(2, 20, 7);
+}
+
+.footer
+{
+    background: rgb(255, 91, 2);
+    color: white;
+    font-size: 1.6rem;
+    height:15vh;
+    text-align: center;
+    margin-top: 5rem;
+}

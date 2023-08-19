@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:10px;
+}
+
+body
+{
+    background-image: url('img3.jpg');
+    color:white;
+}
+
+.main-container
+{
+    display: flex;
+    margin:auto;
+    max-width: 1440px;
+    width:90%;
+    min-height: 95vh;
+
+    
+}
+
+.container-1{
+    display: flex;
+    flex-direction:column;
+    border:0.5rem solid purple;
+    background:rgb(210, 13, 210);
+    color: white;
+    width:350px;
+    /* flex:25%; */
+    width:90%;
+    
+    margin: 0.5rem 0.5rem;
+    
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem;
+}
+
+.container-2{
+    border:0.5rem solid purple; 
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    /* align-items: flex-end; */
+}
+
+.info
+{
+    border:0.5rem solid purple;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    margin:0.5em 0em;
+    padding: 0rem 1rem;
+
+}
+
+.info:hover
+{
+    outline:0.2rem solid purple; 
+}
+
+.skills
+{
+    border:0.5rem solid purple;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    margin:0.5em 0em;
+    padding: 1em 1em;
+}
+
+.skills:hover
+{
+    outline:0.2rem solid purple;
+}
+
+.box
+{
+    width: 15px;
+    height: 10px;
+    background:greenyellow;
+    animation-name: grow-width-skill;
+    animation-duration:4s; 
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes grow-width-skill {
+    from{width:0;}
+    to{width:100%;}
+}
+
+.languages
+{
+    border:0.5rem solid purple;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    margin:0.5em 0em;
+    padding: 1em 1em;
+}
+
+.languages:hover
+{
+    outline:0.2rem solid purple;
+}
+
+.box1
+{
+    width: 15px;
+    height: 10px;
+    background:greenyellow;
+    animation-name: grow-width-languages;
+    animation-duration:4s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow-width-languages {
+    from{width:0;}
+    to{width:80%;}
+}
+
+
+
+
+.container-1 .display-pic
+{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border:0.3rem solid purple;
+  border-radius:50%;
+  width: 15em;
+  height: 15em;
+  align-self: center;
+  transition:transform 1s ease-in-out;
+  
+}
+
+.container-1 .display-pic:hover
+{
+    transform: rotate(180deg );
+}
+
+
+
+.container-1 h2
+{
+    /* position: absolute; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    top:30%;
+    left:25%;
+}
+
+
+.objective
+{
+    border-radius: 10px;
+    margin: 0.5rem 0.5rem;
+    padding: 0.8em 0.8em;
+}
+
+.objective h2
+{
+    border-bottom: 0.5rem solid purple;
+}
+.education
+{
+    border-radius: 10px;
+    margin: 0.5rem 0.5rem;
+    padding: 1rem 1rem;
+}
+
+.education h2
+{
+    border-bottom: 0.5rem solid purple; 
+    margin-bottom: 0.5rem;
+}
+
+.education a
+{
+    text-decoration: none;
+    color:white;
+}
+
+ .education li
+{
+    display: inline-block;
+} 
+
+.education li:hover
+{
+
+    border-bottom: 5px solid yellow;
+
+}
+
+.experience
+{
+    border-radius: 10px;
+    margin: 0.5rem 1.5rem;
+    padding: 0.8em 0.8em;
+    
+}
+
+.experience h2
+{
+    border-bottom: 0.5rem solid purple;
+}
+
+.hobbies
+{
+   
+    border-radius: 10px;
+    margin: 0.5rem 1.5rem;
+    padding: 0.8em 0.8em;
+}
+
+.hobbies h2
+{
+    border-bottom: 0.5rem solid purple;
+}
+
+.print-button
+{
+    border: 0.5rem solid purple;
+    background:rgb(210, 13, 210);
+    border-radius: 20px;
+    margin:0.5em auto;
+    padding: 1em 1em;
+    
+}
+
+.footer
+{
+    border:0.2rem solid black;
+    height:15vh;
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.8rem;
+    background:rgb(210, 13, 210);
+    color: white;
+}
+
+.footer a
+{
+    text-decoration: none;
+    color:white;
+}
+
+@media (max-width:850px)
+{
+    .main-container{
+        flex-direction: column;
+    }
+    .container-1
+    {
+        margin:auto;
+        max-width: 400px;
+        
+    }
+}
