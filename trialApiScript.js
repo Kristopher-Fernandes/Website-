@@ -41,7 +41,26 @@ function displayResults(drinks) {
 
 
   function showModal(rb,drink) {
-  rb.onclick = () => {alert("Drink Name : "+drink.strDrink+"\n"+"Instructions : "+drink.strInstructions);}
+   rb.onclick = () => {
+    // alert("Drink Name : "+drink.strDrink+"\n"+"Instructions : "+drink.strInstructions);
+    const section3=document.getElementById("s3");
+    section3.style.display="block";
+    console.log(section3);  
+    section3.innerHTML="";
+    const modalDisp=document.createElement("div");
+    modalDisp.classList.add("modal");
+
+    modalDisp.textContent="Drink Name : "+drink.strDrink+"\n"+"Instructions : "+drink.strInstructions;
+
+    const back=document.createElement("button");
+    back.classList.add("close-button");
+    back.textContent='X';
+    modalDisp.appendChild(back);
+
+    back.addEventListener("click",function(){section3.style.display="none";})
+    section3.append(modalDisp);
+  }
+
   
   }
   
