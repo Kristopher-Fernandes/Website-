@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"  defer></script>
+    <style>
+        body{
+            font-family: 'Press Start 2P';
+            background-color: black;
+            color: white;
+        }
+
+        #map{
+            min-height:60vh;
+            max-width: 1000px;
+            margin:0 auto;
+        }
+
+        h1{
+            text-align:center;
+
+        }
+
+        .gm-style-iw-d{
+            color:black;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>Doctors Location</h1>
+    <div id="map" ></div>
+
+    <script>
+        // let marker,infoWindow
+        //Creating the doctors dataset
+        const doctors = [
+                { doctorId: 1, name: 'Dr Prabhudesai', lat: 15.600227, lon: 73.812500 ,info:'ENT specialists'},
+                { doctorId: 2, name: 'Dr Johns', lat: 15.280510, lon: 73.996559 ,info:'Cardiologist'},
+            ];
+
+      //Invoking the function initMap() method to call the map
+       function initMap() {
+        const map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 15.480110, lng: 73.819908 },
+            zoom: 10
+        });
+      
+        //The marker variable will help us to mark places on the map
+        
+        doctors.forEach(doctor => {
+            console.log(doctor);
+            const marker = new google.maps.Marker(
+                {
+                position: { lat: doctor.lat, lng: doctor.lon },
+                map: map,
+                title: doctor.name,
+                icon:{url:"doctorImg4.png",
+                scaledSize : new google.maps.Size(25,26)
+                //25 px width , 26 px height
+                    },
+                animation : google.maps.Animation.DROP
+                });
+            const infoWindow = new google.maps.InfoWindow({
+                content:doctor.info
+            })
+            marker.addListener("click",()=>{infoWindow.open(map,marker) ;
+            } )
+        })     
+        
+    }
+
+    </script>  
+    
+</body>
+</html>
